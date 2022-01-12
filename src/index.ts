@@ -32,18 +32,16 @@ const server = createServer(async (req, res) => {
   res.end();
 });
 
-(async () => {
-  server.listen(PORT);
+server.listen(PORT);
 
-  console.log('app is running!');
+console.log('app is running!');
 
-  process.once('SIGTERM', async () => {
-    console.log('SIGTERM received, terminate server.');
-    server.close();
-  });
+process.once('SIGTERM', async () => {
+  console.log('SIGTERM received, terminate server.');
+  server.close();
+});
 
-  process.once('SIGINT', async () => {
-    console.log('SIGINT received, terminate server.');
-    server.close();
-  });
-})();
+process.once('SIGINT', async () => {
+  console.log('SIGINT received, terminate server.');
+  server.close();
+});
