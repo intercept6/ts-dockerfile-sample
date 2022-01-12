@@ -35,6 +35,10 @@ Resources:
                   - ecr:UploadLayerPart
                   - ecr:CompleteLayerUpload
                 Resource: !Sub arn:aws:ecr:${AWS::Region}:${AWS::AccountId}:repository/${RepositoryName}
+              - Effect: Allow
+                Action:
+                  - ecr:GetAuthorizationToken
+                Resource: '*'
 
       AssumeRolePolicyDocument:
         Statement:
