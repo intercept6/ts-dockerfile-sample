@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "description": "",
   "main": "build/src/index.js",
-  "types": "build/src/index.d.ts",
   "files": [
     "build/src"
   ],
@@ -19,6 +18,7 @@
   "devDependencies": {
     "@types/node": "^14.11.2",
     "gts": "^3.1.0",
+    "prettier-plugin-md-nocjsp": "^1.2.0",
     "ts-node": "^10.4.0",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.0.3"
