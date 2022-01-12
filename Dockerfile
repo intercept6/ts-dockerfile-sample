@@ -9,6 +9,9 @@ WORKDIR /opt/app
 RUN chown node:node ./
 USER node
 
+ARG NODE_ENV=production
+ENV NODE_ENV $NODE_ENV
+
 COPY package*.json ./
 RUN npm ci && npm cache clean --force
 
